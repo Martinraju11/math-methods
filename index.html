@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math methods</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Math methods</caption>
+        <tr>
+            <th>Method</th>
+            <th>Operation</th>
+            <th>Input</th>
+            <th>Output</th>
+        </tr>
+        <tr>
+            <th rowspan="5">Math.abs</th>
+            <td rowspan="5">Returns the absolute value of numbers,returns NaN for strings</td>
+            <td>const a = -87;<br>
+                let b = Math.abs(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);<br>
+            </td>
+            <td>
+                input value is -87<br>
+                Return value is 87
+            </td>
+        </tr>
+        <tr>
+            <td> const a = null;<br>
+                let b = Math.abs(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is null<br>
+                Return value is 0
+            </td>
+        </tr>
+        <tr>
+            <td> const a = "hai";<br>
+                let b = Math.abs(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is hai<br>
+                Return value is NaN
+            </td>
+        </tr>
+        <tr>
+            <td> const a = true;<br>
+                let b = Math.abs(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is true<br>
+                Return value is 1
+            </td>
+        </tr>
+
+        <tr>
+            <td> let a;<br>
+                let b = Math.abs(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is undefined<br>
+                Return value is NaN
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="4">Math.round</th>
+            <td rowspan="4">Rounds the number to its nearest integer</td>
+            <td>const a = 2.49999;<br>
+                let b = Math.round(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);<br>
+            </td>
+            <td>
+                input value is 2.49999<br>
+                Return value is 2
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = 2.50000;<br>
+                let b = Math.round(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is 2.5<br>
+                Return value is 3
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = -2.49999;<br>
+                let b = Math.round(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -2.49999<br>
+                Return value is -2<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = - 2.78;<br>
+                let b = Math.round(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -2.78<br>
+                Return value is -3<br>
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.ceil</th>
+            <td rowspan="3">Rounds the number to the nearest upward integer</td>
+            <td>const a = 2.49999;<br>
+                let b = Math.ceil(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is 2.49999<br>
+                Return value is 3<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = -2.49999;<br>
+                let b = Math.ceil(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -2.49999<br>
+                Return value is -2<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                const a = false - true - 8.6;<br>
+                let b = Math.ceil(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -9.6<br>
+                Return value is -9<br>
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.floor</th>
+            <td rowspan="3">Rounds the number to the nearest downward integer</td>
+            <td>const a = 2.59999;<br>
+                let b = Math.floor(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);<br>
+            </td>
+            <td>
+                input value is 2.59999<br>
+                Return value is 2
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = -2.4;<br>
+                let b = Math.floor(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -2.4<br>
+                Return value is -3
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = false - true;<br>
+                let b = Math.floor(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -1<br>
+                Return value is -1<br>
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.sqrt</th>
+            <td rowspan="3">Returns the square root of the number</td>
+            <td>const a = 16;<br>
+                let b = Math.sqrt(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is 16<br>
+                Return value is 4
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = -4;<br>
+                let b = Math.sqrt(a);<br>
+                document.write(`input value is ${a} `, "<br>", `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -4<br>
+                Return value is NaN
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = false;<br>
+                let b = Math.sqrt(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is false<br>
+                Return value is 0
+            </td>
+        </tr>
+
+
+        <tr>
+            <th rowspan="3">Math.cbrt</th>
+            <td rowspan="3">Returns the cube root of the number</td>
+            <td>const a = 125;<br>
+                let b = Math.cbrt(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is 125<br>
+                Return value is 5
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = -125;<br>
+                let b = Math.cbrt(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -125<br>
+                Return value is -5
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = false;<br>
+                let b = Math.cbrt(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is false<br>
+                Return value is 0
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.random</th>
+            <td rowspan="3">Returns random number between 0 and 1</td>
+            <td>const a = Math.random();<br>
+                document.write(` value is ${a} `);
+            </td>
+            <td>
+                value is 0.6015643266367083
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = Math.round(Math.random() * 1000);<br>
+                document.write(` value is ${a} `,);
+            </td>
+            <td>
+                value is 526
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = Math.random(25);<br>
+                document.write(` value is ${a} `);
+            </td>
+            <td>
+                value is 0.4292016100878351
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.sign</th>
+            <td rowspan="3">Returns the sign of the value (positive:1 negative:-1)</td>
+            <td>const a = -656;<br>
+                let b = Math.sign(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -656<br>
+                Return value is -1<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = 656;<br>
+                let b = Math.sign(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is 656<br>
+                Return value is 1
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = -true;<br>
+                let b = Math.sign(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -1<br>
+                Return value is -1
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.max</th>
+            <td rowspan="3">Returns the maximum value</td>
+            <td>let b = Math.max(70, 89, 89.1);<br>
+                document.write(`Return value is ${b}`);
+            </td>
+            <td>
+                Return value is 89.1<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>let b = Math.max(70, 89, 89.1, "hai");<br>
+                document.write(`Return value is ${b}`);
+            </td>
+            <td>
+                Return value is NaN
+            </td>
+        </tr>
+
+        <tr>
+            <td>let b = Math.max(70, 89, -89.1);<br>
+                document.write(`Return value is ${b}`);
+            </td>
+            <td>
+                Return value is 89
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.min</th>
+            <td rowspan="3">Returns the minimum value</td>
+            <td>let b = Math.min(70, 89, 89.1);<br>
+                document.write(`Return value is ${b}`);
+            </td>
+            <td>
+                Return value is 70
+            </td>
+        </tr>
+
+        <tr>
+            <td>let b = Math.min(70, -89, 89.1);<br>
+                document.write(`Return value is ${b}`);
+            </td>
+            <td>
+                Return value is -89
+            </td>
+        </tr>
+
+        <tr>
+            <td>let b = Math.min(70, 89, 89.1, true);<br>
+                document.write(`Return value is ${b}`);
+            </td>
+            <td>
+                Return value is 1
+            </td>
+        </tr>
+
+        <tr>
+            <th rowspan="3">Math.trunc</th>
+            <td rowspan="3">Returns only the integer part of the number</td>
+            <td>const a = -2.49999;<br>
+                let b = Math.trunc(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is -2.49999<br>
+                Return value is -2
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = 2.89;<br>
+                let b = Math.trunc(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is 2.89<br>
+                Return value is 2
+            </td>
+        </tr>
+
+        <tr>
+            <td>const a = "hai";<br>
+                let b = Math.trunc(a);<br>
+                document.write(`input value is ${a} `, `Return value is ${b}`);
+            </td>
+            <td>
+                input value is hai<br>
+                Return value is NaN
+            </td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>
